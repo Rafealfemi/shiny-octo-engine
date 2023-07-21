@@ -1,0 +1,131 @@
+SELECT * FROM employee;
+DROP Table employee;
+
+CREATE Table employee (
+	employee INT,
+	last_name VARCHAR,
+	first_name VARCHAR,
+	title VARCHAR,
+	reports_to INT,
+	levels VARCHAR,
+	birthdate VARCHAR,
+	hire_date VARCHAR,
+	address  VARCHAR,
+	City VARCHAR,
+	state VARCHAR,
+	country VARCHAR,
+	postal_code VARCHAR,
+	Phone  VARCHAR,
+	fax VARCHAR,
+	email VARCHAR
+
+
+
+
+
+);
+COPY employee FROM 'C:\Users\Public\Documents\employee.csv' DELIMITER ',' HEADER CSV;
+
+SELECT * FROM employee;
+
+CREATE TABLE invoice(
+	invoice_id INT,
+	customer_id VARCHAR,
+	billing_address VARCHAR,
+	billing_city VARCHAR,
+	billing_state VARCHAR,
+	billing_country VARCHAR,
+	billing_postal_code VARCHAR,
+	total float8
+
+
+);
+DROP TABLE invoice;
+CREATE TABLE invoice(
+	invoice_id INT,
+	customer_id INT,
+	invoice_date VARCHAR,
+	billing_address VARCHAR,
+	billing_city VARCHAR,
+	billing_state VARCHAR,
+	billing_country VARCHAR,
+	billing_postal_code VARCHAR,
+	total float8
+
+
+);
+
+
+COPY invoice FROM 'C:\Users\Public\Documents\invoice.csv' DELIMITER ',' HEADER CSV;
+
+SELECT * FROM invoice;
+
+CREATE TABLE playlist(
+	playlist_id INT,
+	name VARCHAR
+
+);
+
+COPY playlist FROM 'C:\Users\Public\Documents\playlist.csv' DELIMITER ',' HEADER CSV;
+
+CREATE TABLE genre(
+	genre_id INT,
+	name VARCHAR
+);
+ COPY genre FROM 'C:\Users\Public\Documents\genre.csv'DELIMITER ',' HEADER CSV;
+
+CREATE TABLE artist(
+artist_id INT,
+name VARCHAR
+	
+);
+
+COPY artist FROM 'C:\Users\Public\Documents\artist.csv'DELIMITER ',' HEADER CSV;
+
+SELECT * FROM artist;
+
+CREATE TABLE customer(
+	customer_id INT,
+	first_name VARCHAR,
+	last_name VARCHAR,
+	company VARCHAR,
+	address VARCHAR,
+	city VARCHAR,
+	state VARCHAR,
+	country VARCHAR,
+	postal_code VARCHAR,
+	phone VARCHAR,
+	fax VARCHAR,
+	email VARCHAR,
+	support_rep_id INT
+
+);
+
+COPY customer FROM 'C:\Users\Public\Documents\customer.csv'DELIMITER ','HEADER CSV;
+
+SELECT * FROM customer
+
+CREATE TABLE media_type (
+	media_type_id INT,
+	name VARCHAR
+	);
+	
+COPY media_type FROM 'C:\Users\Public\Documents\media_type.csv'DELIMITER ','HEADER CSV;
+
+CREATE TABLE invoice_line (
+	invoice_line_id INT,
+	invoice_id INT,
+	track_id INT,
+	unit_price float8,
+	quantity INT
+
+);
+
+COPY invoice_line FROM 'C:\Users\Public\Documents\invoice_line.csv'DELIMITER',' HEADER CSV;
+
+
+
+
+
+
+
